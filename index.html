@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul>
+    <li><img src="images/ylw.gif" alt="yellow" id="yellow"></li>
+    <li><img src="images/org.gif" alt="orange" id="orange"></li>
+    <li><img src="images/ppl.gif" alt="purple" id="purple"></li>
+    <li><img src="images/blu.gif" alt="blue" id="blue"></li>
+    <li><img src="images/pnk.gif" alt="pink" id="pink" onclick=pinkBox() ></li>
+    <li><img src="images/grn.gif" alt="green" id="green"></li>
+    <li><img src="images/ygr.gif" alt="ygreen" id="ygreen"></li>
+    <li><img src="images/gry.gif" alt="gray" id="gray"></li>
+    <li><img src="images/red.gif" alt="red" id="red"></li>
+  </ul>
+
+  <script>
+  
+    var ul = document.querySelector('ul')
+
+    ul.addEventListener('click', function(event){
+
+      // console.log(event.target.id)
+
+      // if(event.target.id == "red"){
+
+      //   console.log("Red Clicked")
+      // }
+      // else if(event.target.id == 'orange'){
+      //   console.log("Orange Clicked")
+      // }
+
+      // console.log("newEvent")
+      // console.log(e)
+
+      switch(event.target.id){
+        case 'red':
+          console.log("red");
+          break;
+        case 'orange':
+          console.log("orange");
+          break;
+        case 'green':
+          console.log("green");
+          break;
+        default:
+          break;
+      }
+    })
+
+    // var li = document.getElementById('yellow');
+
+    // li.addEventListener('click', function(){
+
+    //   alert('Yellow Box Clicked')
+    // })
+
+  //   li.onmousedown = function(){
+
+  //     console.log("Hello Everyone")
+  //   }
+  
+  //   function.pinkBox(){
+  //     alert = alert('pink image clicked')
+  //   }
+  // </script>
+
+</body>
+</html>
