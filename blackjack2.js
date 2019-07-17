@@ -12,9 +12,9 @@ var dealerHand = [];
 
 // creating deck
 function getDeck(){
-    for (var s = 0 < suits.length; s++;) { 
+    for (var s = 0; s < suits.length; s++) { 
         for (var n = 0; n < values, length, n++;){
-        var cardImg = "CardImages/" + values[n] + suits[s] + ".jpg";
+        cardImg = "CardImages/" + values[n] + suits[s] + ".jpg";
         var card = {
             value: value[n],
             Suit: suits[s],

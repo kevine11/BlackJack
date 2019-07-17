@@ -1,73 +1,41 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JavaScript Events</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <ul>
-    <li><img src="images/ylw.gif" alt="yellow" id="yellow"></li>
-    <li><img src="images/org.gif" alt="orange" id="orange"></li>
-    <li><img src="images/ppl.gif" alt="purple" id="purple"></li>
-    <li><img src="images/blu.gif" alt="blue" id="blue"></li>
-    <li><img src="images/pnk.gif" alt="pink" id="pink" onclick=pinkBox() ></li>
-    <li><img src="images/grn.gif" alt="green" id="green"></li>
-    <li><img src="images/ygr.gif" alt="ygreen" id="ygreen"></li>
-    <li><img src="images/gry.gif" alt="gray" id="gray"></li>
-    <li><img src="images/red.gif" alt="red" id="red"></li>
-  </ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Blackjack</title>
+    <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-  <script>
-  
-    var ul = document.querySelector('ul')
+    <div id="table">
+      <div id="dealer-score" class="score">Dealer score: <span>0</span></div>
+      <div id="deck">
+        <div class="back"></div>
+      </div>
+      <div class="container" id="dealer">
+      </div>
 
-    ul.addEventListener('click', function(event){
+      <div class="border-line"></div>
 
-      // console.log(event.target.id)
+      <div id="player-score" class="score">Your score: <span>0</span></div>
+      <div class="container" id="player">
+      </div>
+    </div>
 
-      // if(event.target.id == "red"){
+    <div id="panel">
+      <div id="status">Press Deal to start game</div>
 
-      //   console.log("Red Clicked")
-      // }
-      // else if(event.target.id == 'orange'){
-      //   console.log("Orange Clicked")
-      // }
+      <button id="deal" class="blue" type="button">DEAL</button>
+      <button id="hit" class="green" type="button" disabled>HIT</button>
+      <button id="stand" class="red" type="button" disabled>STAND</button>
 
-      // console.log("newEvent")
-      // console.log(e)
+    </div>
 
-      switch(event.target.id){
-        case 'red':
-          console.log("red");
-          break;
-        case 'orange':
-          console.log("orange");
-          break;
-        case 'green':
-          console.log("green");
-          break;
-        default:
-          break;
-      }
-    })
-
-    // var li = document.getElementById('yellow');
-
-    // li.addEventListener('click', function(){
-
-    //   alert('Yellow Box Clicked')
-    // })
-
-  //   li.onmousedown = function(){
-
-  //     console.log("Hello Everyone")
-  //   }
-  
-  //   function.pinkBox(){
-  //     alert = alert('pink image clicked')
-  //   }
-  // </script>
-
-</body>
+    <script type="text/javascript" src="blackjack2.js"></script>
+    <script type="text/javascript">
+      //initialize the game
+      Blackjack2.init();
+    </script>
+  </body>
 </html>
